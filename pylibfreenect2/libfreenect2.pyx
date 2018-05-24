@@ -221,6 +221,7 @@ cdef class Frame:
         Numpy array of depth or ir data with ndim=2,
         that will be converted to a frame class.
         Default is None.
+
     See also
     --------
 
@@ -1126,7 +1127,7 @@ IF LIBFREENECT2_WITH_OPENGL_SUPPORT == True:
 
 IF LIBFREENECT2_WITH_OPENCL_SUPPORT == True:
     include "opencl_packet_pipeline.pxi"
-    # include "opencl_kde_packet_pipeline.pxi"
+    include "opencl_kde_packet_pipeline.pxi"
 
 cdef class Freenect2Device:
     """Python interface for ``libfreenect2::Freenect2Device``.
